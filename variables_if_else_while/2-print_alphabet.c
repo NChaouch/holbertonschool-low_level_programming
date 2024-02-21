@@ -7,8 +7,11 @@
  */
 
 int main(void)
+
 {
-	putchar("abcdefghijklmnopqrstuvwxyz");
+	char *alphabet
+	alphabet = "abcdefghijklmnopqrstuvwxyz"
+	putchar(alphabet);
 	putchar("\n");
 	return (0);
 }

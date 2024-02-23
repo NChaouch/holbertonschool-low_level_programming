@@ -9,7 +9,7 @@
  * Return: Always 0
  */
 int main(void)
-{i
+{
 	_putchar('_');
 	_putchar('p');
 	_putchar('u');

@@ -4,16 +4,16 @@
  * print_diagonal - Print line diagonal
  * @n: integer
  */
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int count;
 	int space;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (count = 0; count < n; count++)
+		for (count = 0; count < size; count++)
 		{
-			for (space = 0; space < count; space++)
+			for (space = 0; space < size; space++)
 			{
 				_putchar('#');
 			}
@@ -25,4 +25,4 @@ void print_diagonal(int n)
 	{
 		_putchar('\n');
 	}
-}
+}    

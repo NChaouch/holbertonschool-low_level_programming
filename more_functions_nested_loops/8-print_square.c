@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_diagonal - Print line diagonal
- * @n: integer
+ * print_square - Print square
+ * @size: integer
  */
 void print_square(int size)
 {
@@ -25,4 +25,4 @@ void print_square(int size)
 	{
 		_putchar('\n');
 	}
-}    
+}

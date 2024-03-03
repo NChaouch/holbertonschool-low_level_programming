@@ -1,6 +1,7 @@
 #include "main.h"
 #include "2-strlen.c"
 #include "_putchar.c"
+#include <stdlib.h>
 /**
  *rev_string -  Write a function that reverses a string
  *@s: character string
@@ -11,11 +12,17 @@
 void rev_string(char *s)
 {
 	int rev;
+	char *p;
+
+	p = (char *)malloc(sizeof(char) * (_strlen(s) + 1));
 
 	for (rev = 0 ; rev < _strlen(s); rev++)
 
 	{
-		_putchar(s[_strlen(s) - rev - 1]);
+		p[rev] = *(s + rev);
 	}
-	_putchar('\n');
+	for (rev = 0 ; rev < _strlen(s); rev++)
+	{
+		*(s + rev) = p[_strlen(s) - (rev + 1)];
+	}
 }

@@ -1,8 +1,9 @@
 #include "main.h"
 /**
  *print_chessboard -  Write a function that prints the chessboard
- *@a: character
- *
+ *@a: array of the chessboard
+ *n: count of the columns
+ *index: count of the lines
  *
 */
 void print_chessboard(char (*a)[8])

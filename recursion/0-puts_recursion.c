@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * _strchr - Write a function that locates a character in a string
- * @s: pointer to the first occurrence of the character c
- * @c: the character of the string s
- * Return: s
+ * _puts_recursion - Write a function that
+ * prints a string, followed by a new line
+ * @s: pointer of the character
+ * _puts_recursion: recursion of the pointer s
 */
 void _puts_recursion(char *s)
 {

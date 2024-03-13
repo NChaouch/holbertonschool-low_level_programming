@@ -12,9 +12,9 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int length_s1;
-	unsigned int length_s2;
-	unsigned int count;
+	int length_s1 = 0;
+	int length_s2 = 0;
+	int count;
 	char *concat_str;
 
 	if (s1 == NULL)

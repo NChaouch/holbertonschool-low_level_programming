@@ -3,26 +3,26 @@
 #include <stdlib.h>
 /**
  * _calloc - Write a function that allocates memory for an array, using malloc
- * @nb: number of elements
+ * @nmemb: number of elements
  * @size: size of each element
  * Return: pointer to allocated memory,
- * NULL if malloc fails or nb or size is 0
+ * NULL if malloc fails or nmemb or size is 0
  */
-void *_calloc(unsigned int nb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *memory_ptr; /* Declaration of a pointer */
-	unsigned int result_size; /* Declaration of a variable */
-	unsigned int count; /* Declaration of a variable */
+	void *memory_ptr;
+	unsigned int result_size;
+	unsigned int count;
 
-	if (nb == 0 || size == 0) /* Check if nb or size is equal to 0 */
-	return (NULL); /* Return NULL if one of the parameters is 0 */
+	if (nmemb == 0 || size == 0) /* Check if nb or size is equal to 0 */
+	return (NULL);
 
 
-	result_size = nb * size; /* Calculate total size required */
+	result_size = nmemb * size; /* Calculate total size required */
 	memory_ptr = malloc(result_size); /* Dynamic memory allocation */
 
 	if (memory_ptr == NULL) /* Check if malloc has failed */
-	return (NULL); /* Return NULL if allocation failed */
+	return (NULL);
 
 	for (count = 0; count < result_size; count++)
 	{

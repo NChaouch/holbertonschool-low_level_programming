@@ -5,6 +5,11 @@
  * @f: pointer to the function that print the name
 */
 void print_name(char *name, void (*f)(char *))
+{
+	if (f == NULL)
 	{
-		f(name); /* print name */
+		return;
 	}
+
+	f(name); /* print name */
+}

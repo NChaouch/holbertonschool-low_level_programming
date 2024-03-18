@@ -1,7 +1,7 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
-#include <stddef.h>
+#include <stdlib.h>
 
 /**
  * struct dog - Define a new type struct dog with the following elements

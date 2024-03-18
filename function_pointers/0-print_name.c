@@ -10,6 +10,8 @@ void print_name(char *name, void (*f)(char *))
 	{
 		return;
 	}
-
-	f(name); /* print name */
+	else
+	{
+		f(name); /* print name */
+	}
 }

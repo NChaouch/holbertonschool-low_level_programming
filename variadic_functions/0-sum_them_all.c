@@ -17,23 +17,24 @@ int sum_them_all(const unsigned int n, ...)
 	va_list args;
 	unsigned int sum = 0, count;
 
-	va_start(args, n); /* Initialize the va_list variable */
-			      /* to start processing the arguments */
+	/* Initialize the va_list variable */
+	va_start(args, n);
 
 	if (n == 0)
 	{
 		return (0);
 	}
 
-	for (count = 0; count < n; count++)	/* Is moving the arguments */
+	/* Is moving the arguments */
+	for (count = 0; count < n; count++)
 	{
-					       /* and calculate their sum */
-		sum += va_arg(args, int); /* Get the next argument of type int */
+		/* Get the next argument of type int */
+		sum += va_arg(args, int);
 	}
-					     /*from the va_list and add it to the sum */
 
-	va_end(args); /* End of use of the arguments */
+	/* End of use of the arguments */
+	va_end(args);
 
-	return (sum); /* Return the calculated sum */
-
+	/* Return the calculated sum */
+	return (sum);
 }

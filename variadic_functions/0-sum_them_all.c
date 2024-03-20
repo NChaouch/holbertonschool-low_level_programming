@@ -1,12 +1,8 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - Write a function that
- * returns the sum of all its parameters.
- * The function takes a variable number
- * of integers as arguments and calculates their sum.
+ * sum_them_all - Write a function that returns the sum of all its parameters.
  * @n: the number of parameters.
- * args: arguments of the function.
  * Return:
  * If n == 0, the function return 0.
  * But, this  n > 0, it returns the sum.
@@ -15,7 +11,7 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list args;
-	unsigned int sum = 0, count;
+	unsigned int sum = 0, index;
 
 	/* Initialize the va_list variable */
 	va_start(args, n);
@@ -26,7 +22,7 @@ int sum_them_all(const unsigned int n, ...)
 	}
 
 	/* Is moving the arguments */
-	for (count = 0; count < n; count++)
+	for (index = 0; index < n; index++)
 	{
 		/* Get the next argument of type int */
 		sum += va_arg(args, int);

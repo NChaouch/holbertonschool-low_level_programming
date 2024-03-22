@@ -2,6 +2,7 @@
 #define FUNCTION_POINTERS_H
 
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct dog - Define a new type struct dog with the following elements

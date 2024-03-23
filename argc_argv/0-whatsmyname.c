@@ -17,5 +17,5 @@ int main(int argc, char *argv[])
 		printf("%s\n", argv[0]); /* Print the first argument */
 
 
-	return 0; /* Success of termination */
+	return (0); /* Success of termination */
 }

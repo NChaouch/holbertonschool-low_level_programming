@@ -8,7 +8,6 @@
 */
 int main(int argc, char *argv[])
 {
-	(void)argc; /* Unused parameters */
 	(void)argv; /* Unused parameters */
 
 		printf("%d\n", argc - 1); /* Print the number of arguments */

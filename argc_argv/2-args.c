@@ -8,12 +8,17 @@
 */
 int main(int argc, char *argv[])
 {
-	(void)argc; /* Unused parameter */
+	(void)argc; /* Unused parameters */
+	(void)argv; /* Unused parameters */
+	int count;
 
-	if (argv != NULL && argv[0] != NULL) /* Check if the argv is not NULL */
-						/* and the first argument exist */
+	for (count = 0; count < argc; count++)
 
-		printf("%s\n", argv[0]); /* Print the first argument */
+	{
+
+		printf("%d\n", argc - 1); /* Print the number of arguments */
+					/* excluding the program name*/
+	}
 
 
 	return (0); /* Success of termination */

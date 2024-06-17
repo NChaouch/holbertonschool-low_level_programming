@@ -21,7 +21,7 @@ int main(void)
 	}
 	else if (n % 10 == 0)
 	{
-		printf("%d and is \n", n % 10);
+		printf("%d and is\n", n % 10);
 	}
 	else
 	{

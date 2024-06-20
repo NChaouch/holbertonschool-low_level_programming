@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * 
- * 
- * @n: integer.
+ * print_last_digit - function that prints
+ * the last digit of a number.
+ * Return: ld.
+ * @num: integer.
  */
-
-
-int print_last_digit(int n)
+int print_last_digit(int num)
 {
-	int ld;
+	int ld = num % 10;
 
-	ld = _abs(n % 10);
+	if (ld < 0)
+	{
+		ld = -ld; /* If ld is negative, this line converts ld to positive */
+	}
+
 	_putchar(ld + '0');
 	return (ld);
 }
-

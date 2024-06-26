@@ -13,7 +13,8 @@ void puts_half(char *str)
 	}
 	else
 	{
-		str = str + (_strlen(str) - 1) / 2; /* - 1 is in order to get even number */
+		str = str + ((_strlen(str) + 1) / 2); /* - 1 is in order */
+							/* to get even number */
 	}
 	while (*str)
 	{

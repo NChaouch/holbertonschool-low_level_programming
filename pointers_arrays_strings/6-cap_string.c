@@ -9,12 +9,12 @@ char *cap_string(char *str)
 	int ct = 0;
 	char sep[] = " \t\n,;.!?\"(){}";
 	int s;
-	
+
 	if (str[ct] >= 'a' && str[ct] <= 'z')
 	{
 		str[ct] = str[ct] - 32;
 	}
-	
+
 	while (str[ct] != '\0')
 	{
 		for (s = 0; sep[s] != '\0'; s++)

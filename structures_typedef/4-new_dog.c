@@ -41,8 +41,47 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (new_dog->age < 0)
 	{
+		free(new_dog->name);
+		free(new_dog->owner);
+		free(new_dog);
 		return (NULL);
 	}
 
 	return (new_dog);
+}
+
+/**
+ * *_strdup - function that returns a pointer to
+ * a newly allocated space in memory, which contains
+ * a copy of the string given as a parameter.
+ * @str: character.
+ * Return: NULL
+ */
+char *_strdup(char *str)
+{
+	char *pstr;
+	unsigned int ct, len;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	for (len = 0; str[len]; len++)
+
+		pstr = malloc(sizeof(char) * (len + 1));
+
+	if (pstr == NULL)
+	{
+		return (NULL);
+	}
+
+	for (ct = 0; ct <= len; ct++)
+	{
+		pstr[ct] = str[ct];
+	}
+
+	pstr[ct] = '\0';
+
+	return (pstr);
 }

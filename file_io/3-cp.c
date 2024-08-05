@@ -25,38 +25,38 @@ int main(int argc, char *argv[])
 	mode_t mode = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	/* Set file permissions: rw-rw-r-- (Owner: read/write, */
 	/* Group: read/write, Others: read) */
-	/* Check the correct number of arguments */
-	if (argc < 3)
+	if (argc < 3) /* Check the correct number of arguments */
 		error_exit(97, "Usage: %s file_from file_to\n", 0);
-	/* Open file for read only */
-	des_src = open(argv[1], O_RDONLY);
+	des_src = open(argv[1], O_RDONLY); /* Open file for read only */
 	if (des_src == (-1))
 		error_exit(98, "Error: Can't read from file %s\n", 0);
-	/* Open or create write destination file */
 	des_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, mode);
 	if (des_dest == (-1))
+	{
 		close(des_src);
 		error_exit(99, "Error: Can't write to %s\n", 0);
-	/* loop for read file source and write to the file destination */
+	}
 	while ((byt_read = read(des_src, buff, BUFFER_SIZE)) > 0)
+	/*loop for read file source and write to the file destination */
 	{
 		byt_write = write(des_dest, buff, byt_read);
 
 		if (byt_write != byt_read)
+		{
 			close(des_src);
 			close(des_dest);
 			error_exit(99, "Error: Can't write to %s\n", 0);
+		}
 	}
-	/* Check for read error */
-	if (byt_read == (-1))
+	if (byt_read == (-1)) /* Check for read error */
+	{
 		close(des_src);
 		close(des_dest);
 		error_exit(98, "Error: Can't read from file %s\n", 0);
-	/* close the file source */
-	if (close(des_src) == (-1))
+	}
+	if (close(des_src) == (-1)) /* close the file source */
 		error_exit(100, "Error: Can't close fd %d\n", des_src);
-	/* close the file destination */
-	if (close(des_dest) == (-1))
+	if (close(des_dest) == (-1)) /* close the file destination */
 		error_exit(100, "Error: Can't close fd %d\n", des_dest);
 	return (0);
 }
